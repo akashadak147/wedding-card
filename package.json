@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Royal Bengali Wedding Online Invitation Card with Interactive 3D Envelope, Music, Animations, and Itinerary",
   "scripts": {
+    "build": "echo 'Static site ready'",
     "start": "node server.js",
     "serve": "npx serve -l 3000 .",
     "dev": "node server.js"
@@ -16,4 +17,3 @@
   "author": "",
   "license": "MIT"
 }
-
