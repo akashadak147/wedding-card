@@ -55,7 +55,8 @@
     .ldr__wing { transform-origin: 50% 50%; animation: ldrFlap 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate; will-change: transform; }
     .ldr__line { margin: 0; font-family: "Tiro Bangla", "Noto Serif Bengali", serif; font-size: 17px; color: #f6e3a8; opacity: 0; animation: ldrFade 1.2s ease 0.6s forwards; }
     .ldr__bar { width: 170px; height: 1px; background: rgba(224, 189, 114, 0.18); overflow: hidden; opacity: 0; animation: ldrFade 1s ease 0.9s forwards; }
-    .ldr__bar i { display: block; height: 100%; width: 100%; background: #e0bd72; transform-origin: left; transform: scaleX(var(--p, 0)); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .ldr__bar i { display: block; height: 100%; width: 100%; background: #e0bd72; transform-origin: left; transform: scaleX(var(--p, 0)); animation: ldrFill 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; transition: transform 0.4s ease; }
+    @keyframes ldrFill { 0% { transform: scaleX(0); } 30% { transform: scaleX(0.4); } 70% { transform: scaleX(0.85); } 100% { transform: scaleX(1); } }
     @keyframes ldrIn { to { opacity: 1; transform: none; } }
     @keyframes ldrFloat { from { transform: translateY(3px); } to { transform: translateY(-5px); } }
     @keyframes ldrFlap { from { transform: scaleX(1); } to { transform: scaleX(0.62); } }
@@ -74,17 +75,18 @@
         var l = document.getElementById('loader');
         if (l) {
           l.style.opacity = '0';
+          l.style.visibility = 'hidden';
           l.style.pointerEvents = 'none';
-          setTimeout(function() { if (l && l.parentNode) l.parentNode.removeChild(l); }, 800);
+          setTimeout(function() { if (l && l.parentNode) l.parentNode.removeChild(l); }, 600);
         }
       }
-      setTimeout(showPage, 2200);
-      window.addEventListener('load', function() { setTimeout(showPage, 1200); });
+      setTimeout(showPage, 1400);
+      window.addEventListener('load', function() { setTimeout(showPage, 1000); });
     })();
   </script>
-  <script src="/config.js"></script>
-  <script type="module" crossorigin src="/assets/index-B18Y5xzO.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DCIuz4c2.css">
+  <script src="/config.js?v=2"></script>
+  <script type="module" crossorigin src="/assets/index-v2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-v2.css">
 </head>
 <body>
   <div class="loader" id="loader" aria-hidden="true">
