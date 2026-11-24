@@ -2,7 +2,7 @@
 
 An ultra-luxury, interactive digital wedding invitation card website with smooth animations, custom Bengali typography, traditional royal aesthetic, background shehnai music, and interactive elements.
 
-Direct replica and customizable template of the online wedding invitation: [https://online-invitation-card-jh9w.vercel.app/](https://online-invitation-card-jh9w.vercel.app/)
+ 
 
 ---
 
